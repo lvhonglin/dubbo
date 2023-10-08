@@ -1,0 +1,26 @@
+server:
+  port: 9007
+dubbo:
+  registries:
+
+    beijing:
+      address: nacos://localhost:8848
+
+  protocol:
+    name: dubbo
+    port: 20887
+    dispatcher: all
+    threadpool: fixed2
+    threads: 3
+    queues: 101010
+    corethreads: 2
+    serialization: java
+    accepts: 10
+
+  application:
+    name: "dubbo-server"
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: "dubbo1"
